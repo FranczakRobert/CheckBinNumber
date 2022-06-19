@@ -25,16 +25,15 @@ void CheckBinNumber(int *value, int *size){
 
     for (int i = 0; i < *size; ++i) {
         if((*value & mask) == mask){
-            bits.emplace_back("1");
+            bits.insert(bits.begin(), "1");
         }
         else{
-            bits.emplace_back("0");
+            bits.insert(bits.begin(), "0");
         }
         mask <<=1;
     }
 
     int count = 0;
-    std::reverse(bits.begin(), bits.end());
     for (auto i :  bits) {
         std::cout << i;
         count++;
@@ -44,7 +43,6 @@ void CheckBinNumber(int *value, int *size){
         }
     }
     std::cout << std::endl;
-
 }
 
 int BinOn(int *value, int *size){
