@@ -33,14 +33,14 @@ void CheckBinNumber(int *value, int *size){
         mask <<=1;
     }
 
-    int count = 0;
+    int count = 1;
     for (auto i :  bits) {
         std::cout << i;
-        count++;
         if(count == 4) {
             std::cout << " ";
             count = 0;
         }
+        count++;
     }
     std::cout << std::endl;
 }
